@@ -1,0 +1,12 @@
+= render "header"
+.new
+  = form_with model: @task, local: true, class: 'new__contents' do |f|
+    .new__contents__title
+      タスク新規作成
+    .new__contents__task
+      タスク
+    .new__contents__text
+      = f.text_field :content, type: "text", class: "new__contents__text__form"
+    .new__contents__submit
+      = f.submit "作成" , class: "new__contents__submit__button"
+= render "footer"
