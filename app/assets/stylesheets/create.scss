@@ -1,0 +1,11 @@
+.create {
+  background-color: rgb(204, 236, 177);
+  height: 9vh;
+  width: 100vw;
+  &__info {
+    font-size: 1.2em;
+    color: #38ac29;
+    margin-left: 2em;
+    line-height: 4em;
+  }
+}

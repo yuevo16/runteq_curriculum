@@ -1,0 +1,33 @@
+.new {
+  height: 30vh;
+  width: 100vw;
+  &__contents {
+    height: 30vh;
+    width: 50vw;
+    margin: auto;
+    &__title {
+      font-size: 2em;
+    }
+    &__task {
+      margin-top: 1em;
+    }
+    &__text {
+      margin-top: 1em;
+      &__form {
+        height: 5vh;
+        width: 40vw;
+        font-size: 1.2em;
+      }
+    }
+    &__submit {
+      margin-top: 1em;
+      &__button {
+        height: 5vh;
+        width: 4vw;
+        background-color: blue;
+        color: white;
+        border-radius: 10%;
+      }
+    }
+  }
+}
