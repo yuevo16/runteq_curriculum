@@ -4,6 +4,6 @@
       = task.content
       .result__contents__menu
         .result__contents__menu__edit
-          = link_to "編集", edit_task_path, class: "edit_button"
+          = link_to "編集", edit_task_path(task), class: "e-button"
         .result__contents__menu__destroy
-          = link_to "削除", method: :destroy, class: "destroy_button"
+          = link_to "削除", "/tasks/#{task.id}", method: :delete, class: "d-button"

@@ -2,10 +2,41 @@
   height: 15vh;
   width: 100vw;
   &__contents {
-    height: 10vh;
-    width: 50vw;
+    width: 30vw;
     margin: auto;
-    border: solid 1px black;
-    &__
+    margin-top: 1em;
+    padding: 1.5em;
+    border: solid 1px rgb(189, 189, 189);
+    display: flex;
+    justify-content: space-between;
+    &__menu {
+      display: flex;
+      &__edit {
+        background-color: rgb(87, 218, 70);
+        height: 2em;
+        width: 3em;
+        margin-left: 1em;
+        text-align: center;
+        line-height: 2em;
+        border-radius: 10%;
+        .e-button {
+          color: white;
+          text-decoration: none;
+        }
+      }
+      &__destroy {
+        background-color: rgb(212, 44, 44);
+        height: 2em;
+        width: 3em;
+        margin-left: 1em;
+        text-align: center;
+        line-height: 2em;
+        border-radius: 10%;
+        .d-button {
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
   }
 }

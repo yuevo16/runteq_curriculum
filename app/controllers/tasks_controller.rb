@@ -4,6 +4,10 @@ class TasksController < ApplicationController
     @tasks = Task.includes(:user).order("created_at DESC")
   end
 
+  def show
+    root_path
+  end
+
   def new
     @task = Task.new
   end
@@ -11,6 +15,7 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
     if @task.save
+       @tasks = Task.includes(:user).order("created_at DESC")
     else
       redirect_to root_path
     end
@@ -22,7 +27,14 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find(params[:id])
-    @task.save
+    @task.update(task_params)
+    @tasks = Task.includes(:user).order("created_at DESC")
+  end
+
+  def destroy
+    task = Task.find(params[:id])
+    task.destroy
+    @tasks = Task.includes(:user).order("created_at DESC")
   end
 
 

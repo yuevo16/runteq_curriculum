@@ -1,0 +1,12 @@
+= render 'header'
+.edit
+  = form_with model: @task, local: true, class: 'edit__contents' do |f|
+    .edit__contents__title
+      タスク編集
+    .edit__contents__task
+      タスク
+    .edit__contents__text
+      = f.text_field :content, type: "text", class: "edit__contents__text__form"
+    .edit__contents__submit
+      = f.submit "編集" , class: "edit__contents__submit__button"
+= render 'footer'
